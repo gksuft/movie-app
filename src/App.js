@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { HashRouter as Router, Route, Routes } from "react-router-dom";
 import Home from "./components/Home/Home";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
@@ -14,8 +14,8 @@ function App() {
         <Header></Header>
         <div className="container">
           <Routes>
-            <Route path='/movie-app' element={<Home/>} />
-            <Route path="/movie-app/movie/:imdbID" element={<MovieDetail/>} />
+            <Route path='/' element={<Home/>} />
+            <Route path="/movie/:imdbID" element={<MovieDetail/>} />
             <Route path="*" element={<PageNotFound/>} />
           </Routes>
         </div>
